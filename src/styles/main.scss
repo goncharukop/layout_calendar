@@ -1,3 +1,35 @@
-body {
-  margin: 0;
+@import "var-for-all";
+@import "formulas";
+
+html {
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $sizeCell;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.calendar {
+  display: flex;
+  flex-wrap: wrap;
+  width: ($sizeCell + $gapCell) * 7;
+
+  div {
+    background-color: #eee;
+    width: $sizeCell;
+    height: $sizeCell;
+    border: 1px solid #000;
+    margin-bottom: $gapCell;
+    margin-right: $gapCell;
+    text-align: center;
+
+    &:hover {
+      background-color: pink;
+      transform: translate(0, -20px); 
+      cursor: pointer;
+      transition: .5s;
+    }
+  }
 }

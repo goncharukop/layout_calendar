@@ -1,0 +1,23 @@
+@for $i from 1 through 31 {
+  .calendar {
+    div:nth-child(#{$i}) {
+      &::after {
+        content: "#{$i}";
+      }
+    }
+  }
+}
+
+@each $days in $daysMonth {
+  .calendar-#{$days} {
+    div:nth-child(n + #{$days + 1}) {
+      display: none;
+    }
+  }
+}
+
+@each $day, $number in $dayName {
+  .calendar-#{$day} :first-child {
+    margin-left: ($sizeCell + $gapCell) * ($number - 1);
+  }
+}

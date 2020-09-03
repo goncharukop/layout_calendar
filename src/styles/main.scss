@@ -1,10 +1,19 @@
 @import "var-for-all";
 @import "formulas";
 
+@mixin centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 html {
   font-family: Arial, sans-serif;
   font-size: $font-size;
   line-height: $sizeCell;
+}
+
+.position {
+  text-align:center
 }
 
 * {
@@ -15,6 +24,7 @@ html {
   display: flex;
   flex-wrap: wrap;
   width: ($sizeCell + $gapCell) * 7;
+  @include centered();
 
   div {
     background-color: #eee;
@@ -33,3 +43,5 @@ html {
     }
   }
 }
+
+

@@ -1,5 +1,6 @@
 @import "var-for-all";
 @import "formulas";
+@import "page";
 
 html {
   font-family: Arial, sans-serif;
@@ -19,8 +20,6 @@ html {
   display: flex;
   flex-wrap: wrap;
   width: ($sizeCell + $gapCell) * 7;
-  margin-left: auto;
-  margin-right: auto;
 
   div {
     background-color: #eee;
